@@ -1,0 +1,20 @@
+export const weatherImages = {
+    'Partly Cloudy ': require('./partlycloudy.png'),
+    'Partly Cloudy': require('./partlycloudy.png'),
+    'Cloudy': require('./cloudy.png'),
+    'Sunny': require('./sunny.png'),
+    'Moderate rain': require('./moderaterain.png'),
+    'Patchy rain possible': require('./moderaterain.png'),
+    'Patchy rain nearby': require('./moderaterain.png'),
+    'Clear': require('./sunny.png'),
+    'Overcast': require('./cloudy.png'),
+    'Light rain': require('./moderaterain.png'),
+    'Moderate rain at times': require('./moderaterain.png'),
+    'Heavy rain': require('./heavyrain.png'),
+    'Heavy rain at times': require('./heavyrain.png'),
+    'Moderate or heavy freezing rain': require('./heavyrain.png'),
+    'Moderate or heavy rain shower': require('./heavyrain.png'),
+    'Moderate or heavy rain with thunder': require('./thunder.png'),
+    'Fog': require('./fog.png'),
+    'other': require('./questionmark.png')
+}
