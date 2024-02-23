@@ -30,7 +30,7 @@ export default function App() {
     }
   }
 
-  const handleTextDebounce = useCallback(debounce(handleSearch, 1200), []);
+  const handleTextDebounce = useCallback(debounce(handleSearch, 1000), []);
   const {current, location} = weather;
 
   return (
@@ -70,14 +70,14 @@ export default function App() {
           }
         </View>
         {/* trenutno stanje sekcija */}
-        <View className="mx-4 flex justify-around flex-1 mb-2">
+        <View className="mx-4 flex justify-around flex-1 mb-2 pt-2">
           <Text className="text-3xl text-center text-white font-bold">{location?.name},
             <Text className="text-lg text-center text-gray-300 font-semibold"> {location?.region},</Text>
             <Text className="text-lg text-center text-gray-300 font-semibold"> {location?.country}</Text>
           </Text>
           <View className="flex-row justify-center">
-            <Image source={require('./assets/clock.png')} className="w-10 h-10"/>
-            <Text className="text-lg text-center text-gray-300 font-semibold pl-4 pt-2">{location?.localtime.substr(10)}</Text>
+            <Image source={require('./assets/clock.png')} className="w-8 h-8"/>
+            <Text className="text-lg text-center text-gray-300 font-semibold pl-3 pt-1">{location?.localtime.substr(10)}</Text>
           </View>
           <View className="flex-row justify-center">
             <Image source={weatherImages[current?.condition?.text]} className="w-36 h-36"/>
@@ -86,7 +86,7 @@ export default function App() {
             <Text className="text-3xl text-center text-white font-bold">{current?.temp_c}°</Text>
             <Text className="text-lg text-center text-gray-300 font-semibold tracking-wider">{current?.condition?.text}</Text>
           </View>
-          <View className="flex-row justify-between mx-4">
+          <View className="flex-row justify-around mx-4">
             <View className="flex-row space-x-2 items-center">
               <Image source={require('./assets/wind.png')} className="w-10 h-10"/>
               <Text className="text-white">{current?.wind_kph} km/h</Text>
@@ -96,7 +96,7 @@ export default function App() {
               <Text className="text-white">{current?.humidity}%</Text>
             </View>
           </View>
-          <View className="flex-row justify-between mx-4">
+          <View className="flex-row justify-around mx-4">
             <View className="flex-row space-x-2 items-center">
               <Image source={require('./assets/precipitation.png')} className="w-10 h-10"/>
               <Text className="text-white">{current?.precip_mm} mm</Text>
